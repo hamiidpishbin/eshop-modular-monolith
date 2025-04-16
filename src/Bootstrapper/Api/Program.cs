@@ -11,6 +11,10 @@ builder.Services
 
 var app = builder.Build();
 
+app.UseBasketModule()
+	.UseCatalogModule()
+	.UseOrderingModule();
+
 app.MapGet("/", () => "Hello World!");
 
 app.Run();
